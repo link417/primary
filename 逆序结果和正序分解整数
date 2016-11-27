@@ -1,0 +1,49 @@
+//这是逆序的结果
+#include<stdio.h>
+int main()
+{
+	
+	int x;
+	scanf("%d",&x);
+	int d;
+	do{
+		d=x%10;
+		printf("%d",d);
+		x/=10;
+	}
+	while(x>0);
+	
+return 0;
+}
+//这是正序分解整数的结果
+#include<stdio.h>
+int main()
+{
+	
+	int x;
+	scanf("%d",&x);
+	int t;
+	int d;
+	do{
+		 d=x%10;
+		 t=t*10+d;
+		x/=10;
+		
+	}
+	while(x>0);
+	printf("x=%d,t=%d\n",x,t);
+	x = t;
+	
+
+	do{
+	    d=x%10;
+		printf("%d",d);
+		if(x>9){
+			printf(" ");
+		}
+		x/=10;
+	}
+	while(x>0);
+	
+return 0;
+}
