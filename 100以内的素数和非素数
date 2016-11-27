@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+int main(void)
+
+{
+	int x;
+	int i;
+	printf("100以内的数字是否是素数有\n");
+	//printf("请输入一个数字\n");
+	//scanf("%d",&x);
+	
+	int isPrime=1;
+	for(x=2;x<100;x++,isPrime=1) 
+		{
+				
+				for(i=2;i<x;i++)
+				{
+					if(x%i==0){
+					isPrime=0;
+					break;
+					}
+				
+				}
+				printf("这个数字是：%d \n",x);
+				if(isPrime==1)
+				{
+					
+					printf("这个数字是素数\n");
+					
+				}
+				else{
+					printf("这个数字不是素数\n");
+					 
+				} 
+				
+     }
+
+	
+}
