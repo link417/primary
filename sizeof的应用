@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a;
+	a=6;
+printf("%ld \n",sizeof(long double));
+printf("%ld \n",sizeof(a++));
+printf("%ld \n",sizeof(a+1.0));  //当出现一个double sizeof会将两个数的运算结果变成double sizeof并不会真的去作计算
+printf("%ld",a);
+//sizeof是静态的他做的任何运算都不会传递	
+return 0;
+
+
+}
