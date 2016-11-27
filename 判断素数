@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int main()
+
+{
+	int x;
+	int i;
+	printf("请输入一个数字\n");
+	scanf("%d",&x);
+	
+	int isPrime=1;
+	
+	for(i=2;i<x;i++)
+	{
+		if(x%i==0){
+		isPrime=0;
+		}
+	
+	}
+	
+	if(isPrime==1)
+	{
+		
+		printf("这个数字是素数");
+		
+	}
+	else{
+		printf("这个数字不是素数");
+		 
+	} 
+	
+	return 0;
+	
+	
+	
+	
+}
