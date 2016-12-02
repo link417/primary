@@ -1,0 +1,85 @@
+#include<stdio.h>
+
+ //函数声明 
+ int isPrime(int x,int knownPrimes[],int numberOfKnownPrimes);
+ //主函数 
+ int main()
+
+{
+	// const int 在我的DVC++ 无用 用#define 定义常数 
+	#define number 10
+	//构建一个数组 并且让prime[0]=2 
+	int prime[number] = {2};
+	// 计数 因为[0]已经定义好了 我们从[1]开始 从1开始计数 
+	int count=1;
+	//从3开始寻找素数 
+	int i=3;
+	//表头 
+		{  
+		   int i;
+		   printf("\t\t\t") ;
+		   for(i=0;i<number;i++)
+		   printf("%d\t",i);
+		}
+		printf("\n");
+		//用while循环 调用isPrime函数 
+		/* 下面是isPrime函数 
+	int isPrime(int x,int knownPrimes[],int numberOfKnownPrimes)
+    {
+	int ret = 1;
+	int i;
+	for(i=0;i<numberOfKnownPrimes;i++)
+	{ 
+	if(x%knownPrimes[i]==0){
+		ret=0;
+		break;
+		} 
+		*/ 
+	//这个函数是得到数字x 数组knownPrimes[] 数字numberOfKnownPrimes 这三个变量
+	//	用于判断x是否是素数 如果是 ret输出为1 如果不是 ret输出为0 knownPrimes 是已知的素数表 
+	while(count<number){
+		if(isPrime(i,prime,count)){
+		//如果为素数 计数加一 并且count得到这个素数 
+		prime[count++]=i;
+		 
+	}
+	  //调试  输出一个表格  i是数字 cnt是计数 这里的循环是用来寻找素数 
+			{
+				 
+				 printf("i=%d \t cnt=%d\t	",i,count);
+				 int i;
+				 for(i=0;i<number;i++){
+				 	printf("%d\t",prime[i]);
+				 	
+				 }
+				 printf("\n");
+			}
+	// 调试		
+     
+	i++;
+	
+}
+    //这个循环是用来将素数表中的十个数字输出 并且每五个为一行 
+    for(i=0;i<number;i++){
+    	printf("%d",prime[i]);
+    	if((i+1)%5)printf("\t");
+    	else printf("\n");
+    	
+	}
+
+     return 0;
+
+}
+int isPrime(int x,int knownPrimes[],int numberOfKnownPrimes)
+{
+	int ret = 1;
+	int i;
+	for(i=0;i<numberOfKnownPrimes;i++)
+	{ 
+	if(x%knownPrimes[i]==0){
+		ret=0;
+		break;
+		}
+	}
+	return ret;
+}
