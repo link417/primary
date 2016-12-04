@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{ int i;
+	char cArray[5]={'A','B','C','D','F'};
+	for(i=0;i<5;i++){
+		printf("cArray=%c ",cArray[i]);
+	}
+	return 0;
+}
+
+
+
+//利用字符串给字符数组赋值
+
+#include<stdio.h>
+int main()
+{ int i;
+	char cArray[5]={"Hello"};
+	for(i=0;i<5;i++){
+		printf("cArray=%c ",cArray[i]);
+	}
+	printf("Hello");
+	printf("\n");
+		char dArray[5]="Hello";
+	for(i=0;i<5;i++){
+		printf("dArray=%c ",dArray[i]);
+	}
+		printf("Hello");
+	return 0;
+}
