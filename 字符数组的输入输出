@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{     int i;
+	char a[6]={"ABCDEF"};
+	for(i=0;i<6;i++)
+	{
+		printf("a[%d]=%c ",i,a[i]);
+	}
+	printf("\n");
+	//输入输出字符串 %s后接的是数组名字 而不是数组元素名 
+	printf("%s",a);
+	return 0;
+}
