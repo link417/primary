@@ -9,7 +9,57 @@
 如果在它的左边的数字比它大，进行交换，这个动作一直继续下去，直到这个数字的左边数字比它还要小，就可以停止了。
 插入排序法主要的回圈有两个变数：i和j，每一次执行这个回圈，就会将第i个数字放到左边恰当的位置去。
 
-
+#include<stdio.h>
+int main()
+{
+	int i;
+	int a[10];
+	int mid;
+	int j,h;
+	
+	printf("please input ten numbers:\n");
+	for(i=0;i<10;i++)
+	{
+		printf("a[%d]=:",i);
+	
+		scanf("%d",&a[i]);
+	}
+	
+	for(i=1;i<10;i++)
+	{
+		h=i;
+		for(j=i-1;j>=0;j--)
+		{
+			while(a[h]<a[j])
+			{
+				mid=a[h];
+				a[h]=a[j];
+				a[j]=mid;
+			   	h--;
+			}
+			
+		}
+		
+		
+		
+		
+		
+	}
+		printf("the order of numbers are:\n");
+	for(i=0;i<10;i++)
+	{
+	printf("a[%d]=%d \t",i,a[i]);
+	if(i==4)
+	{printf("\n");
+	}
+		
+	}
+	
+	
+	return 0;
+	
+	
+ } 
 
 
 
