@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char user[50]={"20165613"};
+	char passwords[50]={"20165613"};
+	int i=0;
+	char realuser[50];
+	char realpasswords[50];
+	while(i<3)
+	{
+		printf("请输入用户名:\n");
+		gets(realuser);
+		printf("请输入密码:\n");
+		gets(realpasswords);
+		if(strcmp(user,realuser))
+		{
+			printf("用户名错误！\n"); 
+		 } 
+		 else{
+		 	if(strcmp(passwords,realpasswords))
+		 	{
+		 		printf("密码错误！\n"); 
+			 }
+			 else
+			 {
+			 	printf("欢迎使用！\n");
+			 	break;
+			 }
+		 }
+		 i++;
+	}
+	if(i==3)
+	{
+		printf("输入字符串错误三次"); 
+	}
+	
+	return 0;
+	
+}
