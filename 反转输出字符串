@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i;
+	char String[7]={"mostqw"};
+
+	char Reverse[7]={0};
+	int size;
+	size=sizeof(String);
+	printf("size=%d\n",size);
+	for(i=0;i<6;i++)
+	{
+		Reverse[size-i-2]=String[i];
+		
+	}
+	printf("输出源字符串：%s\n",String);
+	printf("输出目的字符串：%s\n",Reverse);
+	return 0;
+	
+	
+	
+	
+}
